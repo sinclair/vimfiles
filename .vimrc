@@ -12,10 +12,16 @@ set nocompatible
 if &t_Co > 2 || has('gui_running')
 	syntax on
 	set hlsearch
-"	set guifont=Inconsolata-dz:h14
-	set guifont=Consolas:h12
-
 endif
+
+" /sb/ os based guifont setting
+if has("unix") 
+	set guifont=Inconsolata-dz:h14
+	set listchars=tab:▸\ ,eol:¬
+elseif has("win32") 
+	set guifont=Consolas:h12
+endif 
+
 
 " /sb/ solarized colors
 syntax enable
@@ -70,7 +76,7 @@ nmap <leader>ff :Sexplore<CR>					" - ',ff' :SExplore
 " /sb/ look'n'feel
 set ruler
 set number
-" set listchars=tab:▸\ ,eol:¬
+
 
 " /sb/ netrw 
 let g:netrw_preview=1			" - vertical
