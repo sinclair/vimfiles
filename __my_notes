@@ -1,0 +1,19 @@
+/sb/ How to find current key bindings.[ http://bit.ly/yMfCsA ]
+
+:help index 
+
+:verbose map		" Normal, Visual, Operator-Pending
+:verbose map!		" Insert, Replace, CLI
+
+:help map-listing 
+:help :map-verbose 
+:help :verbose 
+:help :verbose-cmd 
+
+:help map-which-keys " 'about what are the best keys for a {lhs} '
+
+
+/sb/ To manipulate windows
+
+<c-w>[r|R]
+
